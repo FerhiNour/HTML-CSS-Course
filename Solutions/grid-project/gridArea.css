@@ -1,0 +1,47 @@
+* {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+
+.header,
+.footer {
+  background-color: lightcoral;
+}
+
+.nav,
+.sidebar {
+  background-color: lightgreen;
+}
+
+.main {
+  background-color: grey;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 100px);
+  grid-template-areas:
+    "header header header"
+    "navbar main side"
+    "navbar main side"
+    "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+.nav {
+  grid-area: navbar;
+}
+.main {
+  grid-area: main;
+}
+.sidebar {
+  grid-area: side;
+}
+.footer {
+  grid-area: footer;
+}
